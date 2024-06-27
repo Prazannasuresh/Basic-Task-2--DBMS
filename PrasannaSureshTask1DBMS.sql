@@ -1,0 +1,15 @@
+create database inventoryDB;
+use inventoryDB;
+create table products ( name varchar(40), description varchar(60), price decimal(7,2), quantity integer, category varchar(20) );
+insert into products values ('OnePlus 12','Silky Black/16GM RAM/512GB Storage',69999,4,'mobile phones');
+insert into products values ('Redmi 13C','Stardust Black/6GB RAM/128 GB',8499,3,'mobile phones');
+insert into products values ('HP 15S','AMD Ryzen 3 5300U/15.6 inch/FHD/512 GB SSD',30790,7,'laptop');
+insert into products values ('boAT Airdopes','bluetooth TWS Earbuds woth 42H Playtime/ENx Tech/IWP',1230,14,'earpods');
+insert into products values ('ASUS Vivobook 1S','Intel Celeron N4020/15.6 inch/8GB/512 GB SSD',26990,7,'laptop');
+select * from products;
+select * from products where price<30000;
+select * from products where quantity>5;
+update products set price=14023 where name='boAT Airdopes';
+select * from products;
+delete from products where name='HP 15S';
+select * from products;
